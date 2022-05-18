@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="it">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="description" content="Epicode: Calcolatrice windows 11">
+      <meta name="author" content="Laporta Cristian">
+      <link rel="icon" href="assets/img/windows.png" type="image/icon type">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/reset.css">
+      <title>Windows 11</title>
+   </head>
+   <body>
+      <!--  Icone del desktop -->
+      <div id="iconedescktop"  >
+         <img  src="assets/img/cestino.png" href="indeex.html" alt="reciclebin" >
+         <br>
+         <button onclick="toggleExpand('popup')">
+         <img  src="assets/img/calculatordesktop.png"  alt="calculator">
+         </button>
+         <br>
+         <button onclick="toggleExpand('popup3')">
+         <img  src="assets/img/epicodetxt.png"  alt="txt"  >
+         </button>
+         <br>
+         <button onclick="toggleExpand('popup5')">
+         <img  src="assets/img/background.png"  alt="txt"  >
+         </button>
+         <br>
+         <button onclick="toggleExpand('popup6')">
+         <img  src="assets/img/browserdesktop.png"  alt="txt"  >
+         </button>
+      </div>
+      <!--  calcolatrice -->
+      <div id="popup" class="close draggable">
+         <div class="finestra">
+            <div>
+               <button id="windows3" onclick="toggleExpand('popup')">x</button>
+               <button id="windows2" onclick="">□</button>
+               <button id="windows1" onclick="toggleExpand('popup')">-</button>
+            </div>
+            <div>
+               <img src="assets/img/calculatoricon.png" alt="calcolatriceico"> 
+               <p>Calculator</p>
+            </div>
+            <div id="internocalcolatrice">
+               <div id="result">
+                  <div id="output">
+                     <p id="history-value"></p>
+                     <p id="output-value">0</p>
+                  </div>
+               </div>
+               <div id="keyboard">
+                  <button class="empty" >%</button>
+                  <button class="empty"  >CE</button>
+                  <button class="empty" onclick="erase()">C</button>
+                  <button class="empty"onclick="erase2()" ><img src="assets/img/delete.svg" alt="deleteicon"></button>
+                  <button class="empty" >&frac14;</button>
+                  <button class="empty" >x&sup2;</button>
+                  <button class="empty" >&radic;</button>
+                  <button class="empty" onclick="pressOperation ('/')">/</button>
+                  <button class="number" onclick="pressNuber (7)" >7</button>
+                  <button class="number" onclick="pressNuber (8)" >8</button>
+                  <button class="number" onclick="pressNuber (9)"  >9</button>
+                  <button class="empty" onclick="pressOperation ('*')">&times;</button>
+                  <button class="number" onclick="pressNuber (4)" >4</button>
+                  <button class="number" onclick="pressNuber (5)" >5</button>
+                  <button class="number"onclick="pressNuber (6)"  >6</button>
+                  <button class="empty" onclick="pressOperation ('-')" >-</button>
+                  <button class="number" onclick="pressNuber (1)"  >1</button>
+                  <button class="number" onclick="pressNuber (2)"  >2</button>
+                  <button class="number" onclick="pressNuber (3)"  >3</button>
+                  <button class="empty" onclick="pressOperation ('+')">+</button>
+                  <button class="empty" >+/-</button>
+                  <button class="number" onclick="pressNuber (0)" >0</button>
+                  <button class="empty" >.</button>
+                  <button class="empty"  onclick="pressTotal ()">=</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--    windows button -->
+      <div id="popup2" class="close">
+         <div id="windowsbuttonon">
+            <p>Created by Cristian Laporta</p>
+            <hr>
+            <button onclick="top.close()">
+            <img src="assets/img/shutdown.svg" width="10%"alt="spegni">
+            </button>
+         </div>
+      </div>
+      <!--     notepad  -->
+      <div id="popup3" class="close draggable">
+         <div class="finestra2">
+            <div>
+               <button id="windows3" onclick="toggleExpand('popup3')">x</button>
+               <button id="windows2" onclick="">□</button>
+               <button id="windows1" onclick="toggleExpand('popup3')">-</button>
+            </div>
+            <div>
+               <img src="assets/img/notepadicon.png" alt="txtico">
+               <p>note.txt</p>
+            </div>
+            <div id="internotxt">
+               <hr>
+               <textarea name="note" rows="30" cols="38">scrivi qualcosa! </textarea>
+            </div>
+         </div>
+      </div>
+      <!--     modifica sfondo -->
+      <div id="popup5" class="close draggable">
+         <div class="finestra3">
+            <div>
+               <button id="windows3" onclick="toggleExpand('popup5')">x</button>
+               <button id="windows2" onclick="">□</button>
+               <button id="windows1" onclick="toggleExpand('popup5')">-</button>
+            </div>
+            <div>
+               <img src="assets/img/backgroundicon.png" alt="background">
+               <p>change background</p>
+            </div>
+            <div id="internobackground">
+               <p>Cambia lo sfondo!</p>
+               <button id="wallaper-3">1</button>
+               <button id="wallaper-1">2</button>
+               <button id="wallaper-2">3</button>
+            </div>
+         </div>
+      </div>
+      <!--     browser -->
+      <div id="popup6" class="close draggable">
+         <div class="finestra4">
+            <div>
+               <button id="windows3" onclick="toggleExpand('popup6')">x</button>
+               <button id="windows2" onclick="">□</button>
+               <button id="windows1" onclick="toggleExpand('popup6')">-</button>
+            </div>
+            <div>
+               <img src="assets/img/browsericon.png" alt="browser">
+               <p>Bing- Homepage</p>
+            </div>
+            <div id="internobrowser">
+               <iframe src="https://www.bing.com/" frameborder="0" width="800" height="500"></iframe>
+            </div>
+         </div>
+      </div>
+      <!--    dispositivi mobile -->
+      <div>
+         <div id="mobile">
+            <p>Purtroppo non puoi utilizzare windows 11 su un dispositivo mobile.</p>
+            <img src="assets/img/mobile.png" alt="mobilesad">
+         </div>
+      </div>
+      <!--   barra di navigatione -->
+      <header>
+         <div id="navbar" >
+            <button onclick="toggleExpand('popup2')">
+            <img id="windows" src="assets/img/windows.png"  alt="windows button">
+            </button>
+            <button onclick="toggleExpand('popup')">
+            <img id="calculator" src="assets/img/calculator.png"  alt="calculator button">
+            </button>
+            <button onclick="toggleExpand('popup3')">
+            <img id="notepad" src="assets/img/notepadover.png"  alt="notepad button">
+            </button>
+         </div>
+      </header>
+      <!--    suono di apertura -->
+      <audio  autoplay>
+         <source src="assets/mp3/apertura.ogg" type="audio/ogg">
+         <source src="assets/mp3/apertura.mp3" type="audio/mpeg">
+         Your browser does not support the audio element.
+      </audio>
+      <!-- script js -->
+      <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+      <script src="assets/js/javascript.js"></script>
+   </body>
+</html>
