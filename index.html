@@ -25,12 +25,16 @@
          </button>
          <br>
          <button class="draggable" onclick="toggleExpand('popup5')">
-         <img  src="assets/img/background.png"  alt="txt"  >
+         <img  src="assets/img/background.png"  alt="background"  >
          </button>
          <br>
          <button class="draggable" onclick="toggleExpand('popup6')">
-         <img  src="assets/img/browserdesktop.png"  alt="txt"  >
+         <img  src="assets/img/browserdesktop.png"  alt="browser"  >
          </button>
+         <br>
+         <button class="draggable" onclick="toggleExpand('popup7')">
+            <img  src="assets/img/chronometer.png"  alt="chronometer"  >
+            </button>
       </div>
       <!--  calcolatrice -->
       <div id="popup" class="close draggable">
@@ -166,6 +170,34 @@
             </div>
          </div>
       </div>
+     <!--  cronometro -->
+     <div id="popup7" class="close draggable">
+      <div class="finestra3">
+         <div>
+            <button id="windows3" onclick="toggleExpand('popup7'),  resetcronometro()">x</button>
+            <button id="windows2" onclick="">□</button>
+            <button id="windows1" onclick="toggleExpand('popup7')">-</button>
+         </div>
+         <div>
+            <img src="assets/img/chronometerico.png" alt="background">
+            <p><br>chronometer</p>
+         </div>
+         <div id="internocronometro">
+             <br>
+         <div id="cronometro">
+             <p class="cronometroimput" id="minuti">00</p>
+             <span><p class="cronometroimput" id="secondi">00</p>
+               <p class="cronometroimput" id="millisecondi">00</p></span>
+             
+             <br>
+             <button class="buttoncronometro" onclick="startcronometro()">start</button>
+             <button class="buttoncronometro" onclick="stopcronometro()">stop</button>
+             <button class="buttoncronometro" onclick="resetcronometro()">reset</button>
+            </div>
+         </div>
+         
+      </div>
+   </div>
       <!--    dispositivi mobile -->
       <div>
          <div id="mobile">

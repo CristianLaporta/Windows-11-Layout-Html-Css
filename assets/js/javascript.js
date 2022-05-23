@@ -167,6 +167,10 @@ var gg, mm, aaaa;
 gg = data.getDate() + "/";
 mm = data.getMonth() + 1 + "/";
 aaaa = data.getFullYear();
+
+if (Mm < 9 ) {
+	Mm = "0"+ Mm
+}
 document.getElementById("calendario").innerText = (Hh + Mm ) + "\n" + (  mm + gg + aaaa) ;
 }
 functorun();
@@ -191,3 +195,56 @@ urlcontrollo = stampaurl.includes('https://')
 		document.getElementById("namepagebrowser").innerText = stampaurl;
 	}
 }
+
+/* funzione cronometro */
+
+let minuti = 0;
+let secondi = 0;
+let millisecondi = 0;
+
+function cronometrominuti() {
+minuti= minuti + 1;     
+
+document.getElementById("minuti").innerText =  minuti;
+}
+function cronometrosecondi() {
+
+    if (secondi < 60) {
+        secondi= secondi + 1;     
+        document.getElementById("secondi").innerText =   secondi;
+    } else {
+        secondi= 0;
+    }
+   
+    }
+    function cronometromillisecondi() {
+      millisecondi= millisecondi + 1;     
+      document.getElementById("millisecondi").innerText =   millisecondi;
+      }
+ 
+     
+
+   function startcronometro(){
+    minuti11= setInterval(cronometrominuti, 60000);
+     secondi11= setInterval(cronometrosecondi, 1000);
+     millisecondi11= setInterval(cronometromillisecondi, 1);
+    }
+
+function stopcronometro(){
+    clearInterval(minuti11);
+    clearInterval(secondi11);
+    clearInterval(millisecondi11);
+}
+
+function resetcronometro(){
+	clearInterval(minuti11);
+    clearInterval(secondi11);
+    clearInterval(millisecondi11);
+    minuti = 0;
+    secondi = 0;
+    millisecondi = 0;
+	document.getElementById("minuti").innerText =   "00";
+    document.getElementById("secondi").innerText =  "00";
+    document.getElementById("millisecondi").innerText =  "00";
+}
+

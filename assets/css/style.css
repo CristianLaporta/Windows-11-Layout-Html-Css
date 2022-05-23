@@ -41,7 +41,8 @@ button:active
 #popup3,
 #popup4,
 #popup5,
-#popup6 {
+#popup6,
+#popup7{
 	opacity: 1;
 	max-height: 0px;
 	transition: max-height 0.3s, opacity 0.3s;
@@ -52,13 +53,31 @@ button:active
 #popup3.close,
 #popup4.close,
 #popup5.close,
-#popup6.close {
+#popup6.close,
+#popup7.close {
 	display: none;
 	opacity: 0;
 	max-height: 0;
 }
 
 /* Elementi Pagina */
+#cronometro{
+	padding: 70px;
+}
+.buttoncronometro, .buttoncronometro:focus, .buttoncronometro:active {
+background-color: #ffffff !important;
+color: #1b1b1b !important;
+padding: 10px;
+}
+#minuti,
+#secondi,
+#millisecondi {
+	font-size: 40px;
+}
+.cronometroimput{
+	margin-left: 40px;
+	margin-bottom: 40px;
+}
 #url {
     width: 725px;
 }
@@ -78,6 +97,7 @@ button:active
 #internocalcolatrice,
 #internotxt,
 #internobackground,
+#internocronometro,
 .finestra,
 .finestra2 {
 	width: 300px;
