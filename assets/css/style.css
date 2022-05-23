@@ -377,6 +377,7 @@ button:nth-child(24):hover {
 #calendario{
 	float: right;
 	width: 5%;
+	margin-top: 0.5%;
 	background-color: transparent;
 }
 #navbaricon{

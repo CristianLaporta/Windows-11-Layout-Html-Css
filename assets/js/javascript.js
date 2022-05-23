@@ -111,8 +111,17 @@ function erase2() {
 }   
 /* funzione orologio */
 function functorun() {
-today = new Date()
-document.getElementById("calendario").innerText = today;
+var data = new Date();
+var Hh, Mm, Ss, mm;
+Hh = data.getHours() + ":";
+Mm = data.getMinutes() + ":";
+Ss = data.getSeconds() + " PM";
+var data = new Date();
+var gg, mm, aaaa;
+gg = data.getDate() + "/";
+mm = data.getMonth() + 1 + "/";
+aaaa = data.getFullYear();
+document.getElementById("calendario").innerText = (Hh + Mm + Ss) + "\n" + ( gg + mm + aaaa) ;
 }
 functorun();
 setInterval(functorun, 0.1*1000);
