@@ -110,6 +110,10 @@ function erase2() {
 
 }   
 /* funzione orologio */
-
+function functorun() {
 today = new Date()
 document.getElementById("calendario").innerText = today;
+}
+functorun();
+setInterval(functorun, 0.1*1000);
+	
