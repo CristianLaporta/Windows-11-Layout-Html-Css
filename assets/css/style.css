@@ -43,7 +43,7 @@ button:active {
 #popup4.close,
 #popup5.close,
 #popup6.close {
-	overflow: hidden;
+	display: none;
 	opacity: 0;
 	max-height: 0;
 }
@@ -167,8 +167,8 @@ button:active {
 	padding: 1%;
 	position: fixed;
 
-	margin-left: 45%;
-	margin-top: 320px;
+	margin-left: 40%;
+	margin-top: 250px;
 
 
 	background-color: #303030;
@@ -373,7 +373,7 @@ button:nth-child(24):hover {
 #navbaricon{
 	float: right;
 	background-color: transparent;
-	width:90px;
+	width:50px;
 	margin-top: 10px;
 }
 @media screen and (max-width: 490px) {
