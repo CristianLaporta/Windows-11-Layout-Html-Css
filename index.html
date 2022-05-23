@@ -121,11 +121,28 @@
                <p>change background</p>
             </div>
             <div id="internobackground">
-               <p>Cambia lo sfondo!</p>
-               <button id="wallaper-3">1</button>
-               <button id="wallaper-1">2</button>
-               <button id="wallaper-2">3</button>
+               <br>
+               
+               <button id="wallaper-3"><img class="sfondoico" src="assets/img/sfondo3.png" alt="sfondo3"></button>
+               <button id="wallaper-1"><img class="sfondoico" src="assets/img/sfondo.png" alt="sfondo"></button>
+               <button id="wallaper-2"><img class="sfondoico" src="assets/img/sfondo2.png" alt="sfondo2"></button>
+               <button id="wallaper-4"><img class="sfondoico" src="assets/img/sfondo4.png" alt="sfondo4"></button>
+               <button id="wallaper-5"><img class="sfondoico" src="assets/img/sfondo5.png" alt="sfondo5"></button>
+               <button id="wallaper-6"><img class="sfondoico" src="assets/img/sfondo6.png" alt="sfondo6"></button>
+               <button id="wallaper-7"><img class="sfondoico" src="assets/img/sfondo7.png" alt="sfondo7"></button>
+               <button id="wallaper-8"><img class="sfondoico" src="assets/img/sfondo8.png" alt="sfondo8"></button>
+               <button id="wallaper-9"><img class="sfondoico" src="assets/img/sfondo9.png" alt="sfondo9"></button>
+               <button id="wallaper-10"><img class="sfondoico" src="assets/img/sfondo10.png" alt="sfondo10"></button>
+               <button id="wallaper-11"><img class="sfondoico" src="assets/img/sfondo11.png" alt="sfondo11"></button>
+               <button id="wallaper-12"><img class="sfondoico" src="assets/img/sfondo12.png" alt="sfondo12"></button>
+             
+               <br><br>
+               
+               <input type="text" id="sfondolink"  placeholder="inserisci un url per lo sfondo">
+               <br>
+               <button type="button" class="sfondourl" onclick="sfondolink()">cambia sfondo</button>
             </div>
+            
          </div>
       </div>
       <!--     browser -->
@@ -138,10 +155,14 @@
             </div>
             <div>
                <img src="assets/img/browsericon.png" alt="browser">
-               <p>Bing- Homepage</p>
+               <p id="namepagebrowser">browser</p>
             </div>
             <div id="internobrowser">
-               <iframe src="https://www.bing.com/" frameborder="0" width="800" height="500"></iframe>
+               
+               <input type="text" id="url"  placeholder="inserisci un url">
+               <button type="button"  onclick="urlbrowser()">Cerca</button>
+               <br>
+               <iframe id="iframebrowser"src="https://bing.it" frameborder="0" width="800" height="500"></iframe>
             </div>
          </div>
       </div>

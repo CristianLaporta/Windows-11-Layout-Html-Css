@@ -3,6 +3,7 @@
 body {
 	background-color: rgb(53, 53, 53);
 	background-image: url("../img/sfondo.png");
+	background-size: cover;
 	overflow-y: hidden;
 	overflow-x: hidden;
 }
@@ -58,7 +59,22 @@ button:active
 }
 
 /* Elementi Pagina */
+#url {
+    width: 725px;
+}
+#sfondolink {
+	margin-left: 50px;
 
+}
+.sfondoico{
+	width: 90px;
+}
+
+.sfondourl {
+	padding-right: 29px !important;
+	padding-left: 40px;
+	margin-left: 50px;
+	}
 #internocalcolatrice,
 #internotxt,
 #internobackground,
@@ -72,11 +88,7 @@ button:active
 	position: relative;
 }
 
-#internobackground button {
-	margin-top: 10%;
-	padding: 10%;
-	width: 32%;
-}
+
 
 .finestra2 {
 	top: 20%;
@@ -177,7 +189,7 @@ button:active
 	position: fixed;
 
 	margin-left: 40%;
-	margin-top: 250px;
+	margin-top: 350px;
 
 
 	background-color: #303030;

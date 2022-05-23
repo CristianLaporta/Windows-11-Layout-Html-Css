@@ -27,7 +27,15 @@ interact('.draggable').draggable({
 let wallaper1 = document.querySelector('#wallaper-1');
 let wallaper2 = document.querySelector('#wallaper-2');
 let wallaper3 = document.querySelector('#wallaper-3');
-
+let wallaper4 = document.querySelector('#wallaper-4');
+let wallaper5 = document.querySelector('#wallaper-5');
+let wallaper6 = document.querySelector('#wallaper-6');
+let wallaper7 = document.querySelector('#wallaper-7');
+let wallaper8 = document.querySelector('#wallaper-8');
+let wallaper9 = document.querySelector('#wallaper-9');
+let wallaper10 = document.querySelector('#wallaper-10');
+let wallaper11 = document.querySelector('#wallaper-11');
+let wallaper12 = document.querySelector('#wallaper-12');
 wallaper1.addEventListener('click', () => {
 	document.body.style.backgroundImage = "url('assets/img/sfondo.png')";
 });
@@ -37,8 +45,46 @@ wallaper2.addEventListener('click', () => {
 wallaper3.addEventListener('click', () => {
 	document.body.style.backgroundImage = "url('assets/img/sfondo3.png')";
 });
-
-
+wallaper4.addEventListener('click', () => {
+	document.body.style.backgroundImage = "url('assets/img/sfondo4.png')";
+});
+wallaper5.addEventListener('click', () => {
+	document.body.style.backgroundImage = "url('assets/img/sfondo5.png')";
+});
+wallaper6.addEventListener('click', () => {
+	document.body.style.backgroundImage = "url('assets/img/sfondo6.png')";
+});
+wallaper7.addEventListener('click', () => {
+	document.body.style.backgroundImage = "url('assets/img/sfondo7.png')";
+});
+wallaper8.addEventListener('click', () => {
+	document.body.style.backgroundImage = "url('assets/img/sfondo8.png')";
+});
+wallaper9.addEventListener('click', () => {
+	document.body.style.backgroundImage = "url('assets/img/sfondo9.png')";
+});
+wallaper10.addEventListener('click', () => {
+	document.body.style.backgroundImage = "url('assets/img/sfondo10.png')";
+});
+wallaper11.addEventListener('click', () => {
+	document.body.style.backgroundImage = "url('assets/img/sfondo11.png')";
+});
+wallaper12.addEventListener('click', () => {
+	document.body.style.backgroundImage = "url('assets/img/sfondo12.png')";
+});
+function sfondolink() {
+	let url2 = document.getElementById("sfondolink").value;
+	if (url2 == ""){
+		url2 = "assets/img/sfondoerror.png"
+		}
+	sfondlink2(url2)
+	
+	}
+	function sfondlink2(stampasfondo){
+		console.log(stampasfondo)
+		document.body.style.backgroundImage = "url('" + stampasfondo + "')";
+	}
+	
 
 /* calcolatrice */
 let first
@@ -109,6 +155,7 @@ function erase2() {
 
 
 }   
+
 /* funzione orologio */
 function functorun() {
 var data = new Date();
@@ -124,4 +171,23 @@ document.getElementById("calendario").innerText = (Hh + Mm ) + "\n" + (  mm + gg
 }
 functorun();
 setInterval(functorun, 1*1000);
-	
+
+
+/* funzone browser */
+function urlbrowser() {
+let url = document.getElementById("url").value;
+if (url == ""){
+url = "https://bing.it"
+}
+sito(url)
+}
+function sito(stampaurl) {
+urlcontrollo = stampaurl.includes('https://')
+	if  (urlcontrollo == 0 ) {
+		document.getElementById("iframebrowser").src = "https://"+ stampaurl;
+		document.getElementById("namepagebrowser").innerText = stampaurl;
+	}else{
+		document.getElementById("iframebrowser").src = stampaurl;
+		document.getElementById("namepagebrowser").innerText = stampaurl;
+	}
+}
