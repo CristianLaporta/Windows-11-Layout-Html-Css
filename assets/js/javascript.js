@@ -124,5 +124,5 @@ aaaa = data.getFullYear();
 document.getElementById("calendario").innerText = (Hh + Mm + Ss) + "\n" + ( gg + mm + aaaa) ;
 }
 functorun();
-setInterval(functorun, 0.1*1000);
+setInterval(functorun, 1*1000);
 	
