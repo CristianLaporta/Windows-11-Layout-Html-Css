@@ -114,14 +114,13 @@ function functorun() {
 var data = new Date();
 var Hh, Mm, Ss, mm;
 Hh = data.getHours() + ":";
-Mm = data.getMinutes() + ":";
-Ss = data.getSeconds() + " PM";
+Mm = data.getMinutes();
 var data = new Date();
 var gg, mm, aaaa;
 gg = data.getDate() + "/";
 mm = data.getMonth() + 1 + "/";
 aaaa = data.getFullYear();
-document.getElementById("calendario").innerText = (Hh + Mm + Ss) + "\n" + ( gg + mm + aaaa) ;
+document.getElementById("calendario").innerText = (Hh + Mm ) + "\n" + (  mm + gg + aaaa) ;
 }
 functorun();
 setInterval(functorun, 1*1000);
