@@ -365,7 +365,17 @@ button:nth-child(24):hover {
 	margin: 20%;
 	width: 50%;
 }
-
+#calendario{
+	float: right;
+	width: 5%;
+	background-color: transparent;
+}
+#navbaricon{
+	float: right;
+	background-color: transparent;
+	width:90px;
+	margin-top: 10px;
+}
 @media screen and (max-width: 490px) {
 
 	#iconedescktop {

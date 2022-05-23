@@ -109,3 +109,7 @@ function erase2() {
 
 
 }   
+/* funzione orologio */
+
+today = new Date()
+document.getElementById("calendario").innerText = today;
