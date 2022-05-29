@@ -34,7 +34,11 @@
          <br>
          <button class="draggable" onclick="toggleExpand('popup7')">
             <img  src="assets/img/chronometer.png"  alt="chronometer"  >
-            </button>
+            </button> 
+            <br>
+            <button class="draggable" onclick="toggleExpand('popup8')">
+               <img  src="assets/img/memorydesktop.png"  alt="chronometer"  >
+               </button>
       </div>
       <!--  calcolatrice -->
       <div id="popup" class="close draggable">
@@ -196,6 +200,25 @@
             </div>
          </div>
          
+      </div>
+   </div>
+   <!--     browser -->
+   <div id="popup8" class="close draggable">
+      <div class="finestra4">
+         <div>
+            <button id="windows3" onclick="toggleExpand('popup8')">x</button>
+            <button id="windows2" onclick="">□</button>
+            <button id="windows1" onclick="toggleExpand('popup8')">-</button>
+         </div>
+         <div>
+            <img src="assets/img/memoryico.png" alt="memorygame">
+            <p id="namepagebrowser">Memory</p>
+         </div>
+         <div id="internobrowser">
+            
+         
+            <iframe id="iframebrowser"src="app/memory/index.html" frameborder="0" width="1200" height="600"></iframe>
+         </div>
       </div>
    </div>
       <!--    dispositivi mobile -->

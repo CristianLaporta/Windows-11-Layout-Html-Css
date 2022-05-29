@@ -6,6 +6,7 @@ body {
 	background-size: cover;
 	overflow-y: hidden;
 	overflow-x: hidden;
+	color: #ffffff;
 }
 
 /*  navbar */
@@ -16,7 +17,7 @@ body {
 	bottom: 0;
 	width: 100%;
 	height: 5%;
-	
+
 }
 
 /* Elementi */
@@ -42,7 +43,8 @@ button:active
 #popup4,
 #popup5,
 #popup6,
-#popup7{
+#popup7,
+#popup8{
 	opacity: 1;
 	max-height: 0px;
 	transition: max-height 0.3s, opacity 0.3s;
@@ -54,7 +56,8 @@ button:active
 #popup4.close,
 #popup5.close,
 #popup6.close,
-#popup7.close {
+#popup7.close,
+#popup8.close {
 	display: none;
 	opacity: 0;
 	max-height: 0;
