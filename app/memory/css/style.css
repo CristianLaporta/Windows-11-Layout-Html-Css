@@ -1,0 +1,196 @@
+body {
+   font-family: 'Lexend', sans-serif;
+  background-color: rgb(36, 35, 35);
+   background-size: cover;
+   color: antiquewhite;
+}
+
+
+.container {
+
+   width: 900px;
+   margin: auto;
+}
+
+.content,
+h2,
+p,
+#tempoTrascorso {
+   background-color: transparent;
+}
+
+h1 {
+   text-align: center;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text-center {
+   text-align: center;
+}
+
+.icon-grid {
+
+   justify-content: center;
+   flex-wrap: wrap;
+   display: flex;
+   align-items: center;
+
+
+}
+
+.show {
+
+   opacity: 100 !important;
+   visibility: visible !important;
+
+}
+
+#griglia>div {
+  
+   background: rgb(195, 34, 116);
+   background: linear-gradient(0deg, rgba(195, 34, 116, 1) 0%, rgba(253, 45, 248, 1) 100%);
+   border: 1px solid #3889c4;
+   border-radius: 10px;
+   margin: 20px 10px;
+   width: 120px;
+   height: 120px;
+}
+
+.timer {
+   padding: 10px 0;
+}
+
+.icon {
+   font-size: 80px;
+   text-align: center;
+   visibility: visible !important;
+   opacity: 0;
+   width: 100%;
+   height: 100%;
+   cursor: pointer;
+}
+
+.disabled {
+   pointer-events: none;
+   cursor: wait;
+}
+
+.show {
+
+   animation-duration: .5s;
+   background: rgb(254, 153, 255);
+   background: linear-gradient(0deg, rgba(254, 153, 255, 1) 0%, rgba(253, 45, 248, 1) 100%);
+   border: 1px solid #3889c4;
+   border-radius: 10px;
+   animation-name: rotazione-carta;
+}
+
+.find {
+
+   animation-duration: .5s;
+   background: rgb(195, 177, 34);
+   background: linear-gradient(0deg, rgba(195, 177, 34, 1) 0%, rgba(253, 149, 45, 1) 100%);
+   border: 1px solid #3889c4;
+   border-radius: 10px;
+   animation-name: indovinato;
+}
+
+.button {
+   color: white;
+   font-size: 22px;
+   text-align: center;
+   margin-top: 10px;
+   padding: 10px;
+   background: rgb(240, 38, 242);
+   background: radial-gradient(circle, rgba(240, 38, 242, 1) 0%, rgba(160, 45, 253, 1) 100%);
+   border: 1px solid #3889c4;
+   border-radius: 5px;
+}
+
+.button:hover {
+   background-color: #16486c;
+   border: none;
+}
+
+#modal {
+   display: none;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(255, 255, 255, 0.9);
+   position: fixed;
+   top: 0;
+   left: 0;
+}
+
+#modal.active {
+   display: flex;
+}
+
+#modal h2 {
+   margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+   .container {
+      width: 400px;
+   }
+
+   #griglia>div {
+      margin: 5px 5px;
+      width: 70px;
+      height: 70px;
+   }
+
+   .icon {
+      font-size: 60px;
+   }
+}
+
+@media (max-width: 420px) {
+   .container {
+      width: 230px;
+   }
+
+   #griglia>div {
+      margin: 5px 5px;
+      width: 40px;
+      height: 40px;
+   }
+
+   .icon {
+      font-size: 20px;
+   }
+}
+
+@keyframes indovinato {
+
+
+   from {
+      transform: rotate(0deg);
+   }
+
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+@keyframes rotazione-carta {
+
+
+   from {
+      transform: perspective(300px) rotate3d(0, 1, 0, 50deg);
+      animation-timing-function: ease-in;
+   }
+
+   50% {
+      transform: perspective(300px) rotate3d(0, 1, 0, -10deg);
+      animation-timing-function: ease-in;
+   }
+
+   to {
+      transform: perspective(300px);
+      animation-timing-function: ease-in;
+   }
+}
